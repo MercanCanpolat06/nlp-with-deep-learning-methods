@@ -1,0 +1,2 @@
+Hello, 
+In this project, my goal is to create a guide for undergraduate students like me who wants to learn detailed concepts about NLP. I will investigate milestone papers, and try to explain the concepts used within them in a simple manner. 
