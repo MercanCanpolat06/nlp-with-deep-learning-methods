@@ -1,2 +1,4 @@
 data/
 .venv/
+my_custom_vectors.txt
+linear_classifier_with_qwen_labels/qwen_labels.json

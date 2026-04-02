@@ -21,7 +21,7 @@ id2word = {i: word for i, word in enumerate(filtered_words)}
 vocab_size = len(word2id) #different words
 
 #subsampling of frequent words
-threshold = 1e-5 # Genelde bu değer iyi sonuç verir
+threshold = 1e-5
 
 def get_discard_prob(word_count, total_count):
     f = word_count / total_count
@@ -202,4 +202,12 @@ plt.grid(True, linestyle='--', alpha=0.5)
 plt.show()
 
 
-        
+print("Saving vectors as txt")
+
+with open("data/my_custom_vectors.txt", "w", encoding="utf-8") as f:
+    for word, idx in word2id.items():
+        vector = W_in[idx]
+        vec_str = " ".join(map(str, vector))
+        f.write(f"{word} {vec_str}\n")
+
+print("Vector are saved to my_custom_vectors.txt!")
